@@ -67,12 +67,12 @@ const big = sorted.filter((c) => c.count >= BIG);
 const bigRows = [];
 for (let i = 0; i < big.length; i += 3) bigRows.unshift(big.slice(i, i + 3));
 const bands = [
-    small.filter((_, i) => i % 2 === 0),
-    ...bigRows,
-    small.filter((_, i) => i % 2 === 1),
+    { islands: small.filter((_, i) => i % 2 === 0), big: false },
+    ...bigRows.map((islands) => ({ islands, big: true })),
+    { islands: small.filter((_, i) => i % 2 === 1), big: false },
 ]
-    .filter((band) => band.length > 0)
-    .map(centerOut);
+    .filter((band) => band.islands.length > 0)
+    .map((band) => ({ ...band, islands: centerOut(band.islands) }));
 
 // The people on an island, in rows of at most seven, evened out so thirteen
 // stand 6 over 7 rather than 7, 5 and one alone on top. The fuller row
@@ -133,9 +133,13 @@ const rowsOf = (c) => {
                 {/* Three islands a row on phones (two made the cloud 2.3 screens long):
                     a narrower minimum and tighter gaps below sm. */}
                 <div class="flex flex-col gap-y-6 sm:gap-y-8 md:gap-y-10">
+                {/* A row of big islands has a narrower gap and, from xl, runs
+                    past the content width: Persona, Evil Martians and Hack
+                    Club came to 3px over 1088px in October 2026, and a row of
+                    three that wraps puts the biggest island off-centre. */}
                 {bands.map((band, b) => (
-                <ul class="flex flex-wrap justify-center items-end gap-x-3 gap-y-6 sm:gap-x-6 sm:gap-y-8 md:gap-x-10 md:gap-y-10 list-none p-0 m-0">
-                    {band.map((c, i) => {
+                <ul class={`flex flex-wrap justify-center items-end gap-x-3 gap-y-6 sm:gap-x-6 sm:gap-y-8 md:gap-y-10 list-none p-0 m-0 ${band.big ? "xl:-mx-16" : "md:gap-x-10"}`}>
+                    {band.islands.map((c, i) => {
                         const boosted = isBoostedSponsor(c.name);
                         const size = sizeOf(c.count, boosted);
                         return (
