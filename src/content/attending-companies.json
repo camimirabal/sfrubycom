@@ -1,11 +1,16 @@
 {
-  "fetchedAt": "2026-10-02T18:21:47.085Z",
+  "fetchedAt": "2026-10-15T05:18:37.962Z",
   "minAttendees": 2,
   "companies": [
     {
       "name": "Evil Martians",
       "count": 13,
       "characters": [
+        {
+          "name": "Nicolas Erlichman",
+          "url": "https://clouds.sfruby.com/e/2026-bits/nicolas-e",
+          "image": "/attending/nicolas-e.webp"
+        },
         {
           "name": "Victoria Melnikova",
           "url": "https://clouds.sfruby.com/e/2026-bits/victoria-melnikova",
@@ -42,11 +47,6 @@
           "image": "/attending/svyatoslav-kryukov-b5b05195-a91a-448a-a006-0b96e13d4903.webp"
         },
         {
-          "name": "Andrey Novikov",
-          "url": "https://clouds.sfruby.com/e/2026-bits/andrey-novikov",
-          "image": "/attending/andrey-novikov.webp"
-        },
-        {
           "name": "travis turner",
           "url": "https://clouds.sfruby.com/e/2026-bits/travis-turner",
           "image": "/attending/travis-turner.webp"
@@ -57,6 +57,11 @@
           "image": "/attending/irina-nazarova.webp"
         },
         {
+          "name": "Kirill Yakovenko",
+          "url": "https://clouds.sfruby.com/e/2026-bits/kirill-yakovenko",
+          "image": "/attending/kirill-yakovenko.webp"
+        },
+        {
           "name": "Camila Mirabal",
           "url": "https://clouds.sfruby.com/e/2026-bits/camila-cami",
           "image": "/attending/camila-cami.webp"
@@ -65,11 +70,27 @@
           "name": "Vova Dementyev",
           "url": "https://clouds.sfruby.com/e/2026-bits/vova-dem",
           "image": "/attending/vova-dem.webp"
+        }
+      ]
+    },
+    {
+      "name": "Persona",
+      "count": 7,
+      "characters": [
+        {
+          "name": "Melanie Alcantara",
+          "url": "https://clouds.sfruby.com/e/2026-bits/melanie-alcantara",
+          "image": "/attending/melanie-alcantara.webp"
         },
         {
-          "name": "Nicolas Erlichman",
-          "url": "https://clouds.sfruby.com/e/2026-bits/nicolas-e",
-          "image": "/attending/nicolas-e.webp"
+          "name": "Malav Bhavsar",
+          "url": "https://clouds.sfruby.com/e/2026-bits/malav-bhavsar",
+          "image": "/attending/malav-bhavsar.webp"
+        },
+        {
+          "name": "Samuel Giddins",
+          "url": "https://clouds.sfruby.com/e/2026-bits/samuel-giddins",
+          "image": "/attending/samuel-giddins.webp"
         }
       ]
     },
@@ -96,13 +117,18 @@
           "name": "Samuel Fernandez",
           "url": "https://clouds.sfruby.com/e/2026-bits/samuel-fernandez-c3ee20c4-b5e8-4946-895b-292220b34ca3",
           "image": "/attending/samuel-fernandez-c3ee20c4-b5e8-4946-895b-292220b34ca3.webp"
+        },
+        {
+          "name": "Ian Madden",
+          "url": "https://clouds.sfruby.com/e/2026-bits/ian-madden",
+          "image": "/attending/ian-madden.webp"
+        },
+        {
+          "name": "Manusvath Gurudath",
+          "url": "https://clouds.sfruby.com/e/2026-bits/manusvath-gurudath",
+          "image": "/attending/manusvath-gurudath.webp"
         }
       ]
-    },
-    {
-      "name": "Persona",
-      "count": 6,
-      "characters": []
     },
     {
       "name": "Gusto",
@@ -128,6 +154,11 @@
           "name": "Cameron Dutro",
           "url": "https://clouds.sfruby.com/e/2026-bits/cameron-dutro",
           "image": "/attending/cameron-dutro.webp"
+        },
+        {
+          "name": "Alan Ridlehoover",
+          "url": "https://clouds.sfruby.com/e/2026-bits/alan-ridlehoover",
+          "image": "/attending/alan-ridlehoover.webp"
         },
         {
           "name": "Fito Von Zastrow",
@@ -170,6 +201,27 @@
           "name": "Trista Mueller",
           "url": "https://clouds.sfruby.com/e/2026-bits/trista-mueller",
           "image": "/attending/trista-mueller.webp"
+        }
+      ]
+    },
+    {
+      "name": "Order.co",
+      "count": 3,
+      "characters": [
+        {
+          "name": "Madison Sites",
+          "url": "https://clouds.sfruby.com/e/2026-bits/madison-sites",
+          "image": "/attending/madison-sites.webp"
+        },
+        {
+          "name": "Ambreen Hasan",
+          "url": "https://clouds.sfruby.com/e/2026-bits/ambreen-hasan",
+          "image": "/attending/ambreen-hasan.webp"
+        },
+        {
+          "name": "Kat Drobnjakovic",
+          "url": "https://clouds.sfruby.com/e/2026-bits/kat-drobnjakovic",
+          "image": "/attending/kat-drobnjakovic.webp"
         }
       ]
     },
@@ -265,18 +317,18 @@
       ]
     },
     {
-      "name": "Order.co",
+      "name": "Numero",
       "count": 2,
       "characters": [
         {
-          "name": "Madison Sites",
-          "url": "https://clouds.sfruby.com/e/2026-bits/madison-sites",
-          "image": "/attending/madison-sites.webp"
+          "name": "Karan Jain",
+          "url": "https://clouds.sfruby.com/e/2026-bits/karan-jain",
+          "image": "/attending/karan-jain.webp"
         },
         {
-          "name": "Ambreen Hasan",
-          "url": "https://clouds.sfruby.com/e/2026-bits/ambreen-hasan",
-          "image": "/attending/ambreen-hasan.webp"
+          "name": "Kevin Coleman",
+          "url": "https://clouds.sfruby.com/e/2026-bits/kevin-coleman",
+          "image": "/attending/kevin-coleman.webp"
         }
       ]
     },
@@ -400,6 +452,17 @@
       ]
     },
     {
+      "name": "UC Berkeley",
+      "count": 2,
+      "characters": [
+        {
+          "name": "Cosmo Martinez",
+          "url": "https://clouds.sfruby.com/e/2026-bits/cosmo-martinez",
+          "image": "/attending/cosmo-martinez.webp"
+        }
+      ]
+    },
+    {
       "name": "Workshop Software Inc",
       "count": 2,
       "characters": [
@@ -411,17 +474,7 @@
       ]
     },
     {
-      "name": "Numero",
-      "count": 2,
-      "characters": []
-    },
-    {
       "name": "thoughtbot",
-      "count": 2,
-      "characters": []
-    },
-    {
-      "name": "UC Berkeley",
       "count": 2,
       "characters": []
     }

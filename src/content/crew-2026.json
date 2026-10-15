@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-02T18:21:47.087Z",
+  "fetchedAt": "2026-10-15T05:18:37.970Z",
   "organizers": [
     {
       "name": "Aleksandr Berdiugin",
@@ -37,6 +37,26 @@
       "image": "/attending/irina-nazarova.webp"
     },
     {
+      "name": "Kirill Yakovenko",
+      "url": "https://clouds.sfruby.com/e/2026-bits/kirill-yakovenko",
+      "image": "/attending/kirill-yakovenko.webp"
+    },
+    {
+      "name": "Nicolas Erlichman",
+      "url": "https://clouds.sfruby.com/e/2026-bits/nicolas-e",
+      "image": "/attending/nicolas-e.webp"
+    },
+    {
+      "name": "Svyatoslav Kryukov",
+      "url": "https://clouds.sfruby.com/e/2026-bits/svyatoslav-kryukov-b5b05195-a91a-448a-a006-0b96e13d4903",
+      "image": "/attending/svyatoslav-kryukov-b5b05195-a91a-448a-a006-0b96e13d4903.webp"
+    },
+    {
+      "name": "travis turner",
+      "url": "https://clouds.sfruby.com/e/2026-bits/travis-turner",
+      "image": "/attending/travis-turner.webp"
+    },
+    {
       "name": "Victoria Melnikova",
       "url": "https://clouds.sfruby.com/e/2026-bits/victoria-melnikova",
       "image": "/attending/victoria-melnikova.webp"
@@ -54,7 +74,9 @@
       "image": "/attending/aurelie-verrot.webp"
     },
     {
-      "name": "Chris Houhoulis"
+      "name": "Chris Houhoulis",
+      "url": "https://clouds.sfruby.com/e/2026-bits/chris-houhoulis",
+      "image": "/attending/chris-houhoulis.webp"
     },
     {
       "name": "Gary Tou",
@@ -85,7 +107,9 @@
       "image": "/attending/lindsey-anne.webp"
     },
     {
-      "name": "Madeline Hou"
+      "name": "Madeline Hou",
+      "url": "https://clouds.sfruby.com/e/2026-bits/madeline-hou",
+      "image": "/attending/madeline-hou.webp"
     },
     {
       "name": "Steven T Ancheta"

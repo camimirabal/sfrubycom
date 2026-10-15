@@ -22,18 +22,18 @@ import { fileURLToPath } from "node:url";
 // block renders. Committed alongside the JSON so build:dev has them.
 const IMG_DIR = fileURLToPath(new URL("../public/attending/", import.meta.url));
 const IMG_HEIGHT = 128;
-// Organizers and volunteers for the homepage crew section: everyone approved
-// on the "Organizer/volunteer" ticket. Luma has one ticket type for both, so
-// the split is by company: Evil Martians organizes, everyone else on the
-// ticket volunteers. Same image snapshot as the companies.
+// Organizers and volunteers for the homepage crew section. Every approved
+// Martian organizes, whatever their ticket (the organizers who speak or
+// sponsor hold a Speakers or Sponsor ticket); everyone else approved on the
+// "Organizer/volunteer" ticket volunteers. A Martian is anyone with Evil
+// Martians as their company or an @evilmartians.com email. Same image
+// snapshot as the companies.
 const CREW_OUT = fileURLToPath(new URL("../src/content/crew-2026.json", import.meta.url));
 const ORGANIZER_COMPANY = "evil martians";
 const isCrewTicket = (ticket) => /organi[sz]er|volunteer/i.test(ticket);
-const crewBucket = (guest) =>
+const isOrganizer = (guest) =>
   companyKey(companyAnswer(guest)) === ORGANIZER_COMPANY ||
-  /@evilmartians\.com$/i.test(guest.email ?? guest.user_email ?? "")
-    ? "organizers"
-    : "volunteers";
+  /@evilmartians\.com$/i.test(guest.email ?? guest.user_email ?? "");
 const OUT = fileURLToPath(
   new URL("../src/content/attending-companies.json", import.meta.url),
 );
@@ -198,6 +198,18 @@ try {
       !NOT_ATTENDEE_TICKETS.has(g.event_ticket?.name ?? ""),
   );
 
+  // Everyone holding a ticket that is no longer approved, unless they also
+  // hold an approved one. Keyed by the Luma name, so a card name is looked
+  // up through NAME_ALIASES.
+  const nameKeys = (g) => [g.name, g.user_name, g.user?.name].filter(Boolean).map(nameKey);
+  const approved = new Set(attendees.flatMap(nameKeys));
+  const cancelled = new Set(
+    guests
+      .filter((g) => g.approval_status !== "approved")
+      .flatMap(nameKeys)
+      .filter((n) => !approved.has(n)),
+  );
+
   // Group attendees by company.
   const companies = new Map();
   for (const g of attendees) {
@@ -238,7 +250,12 @@ try {
     for (const p of c.people) {
       add(byName.get(p) ?? (await probeCharacter(c.names.get(p))));
     }
-    for (const ch of byCompany.get(c.key) ?? []) add(ch);
+    // A card outlives its ticket, so a person whose ticket was cancelled
+    // ("not going" on Luma) is left off.
+    for (const ch of byCompany.get(c.key) ?? []) {
+      const n = nameKey(ch.name);
+      if (!cancelled.has(NAME_ALIASES[n] ?? n)) add(ch);
+    }
     // The most common raw spelling. Among equals, the one that is already the
     // company's own key, so an alias does not put the division's name on the
     // island: "Tern" over "Tern Travel" when each was typed once.
@@ -289,8 +306,9 @@ try {
     // A guest can hold several tickets (an organizer who also bought a
     // Regular one); the crew ticket may be any of them.
     const tickets = [g.event_ticket, ...(g.event_tickets ?? [])].map((t) => t?.name ?? "");
-    if (!tickets.some(isCrewTicket)) continue;
-    const bucket = crewBucket(g);
+    const organizer = isOrganizer(g);
+    if (!organizer && !tickets.some(isCrewTicket)) continue;
+    const bucket = organizer ? "organizers" : "volunteers";
     // Luma carries a registration name and a profile name ("Camila" and
     // "Camila Mirabal"); the character may be under either, or under a
     // nickname ("Vova Dementyev"). Exact name first, then the slug, then a
