@@ -199,7 +199,8 @@ try {
   );
 
   // Everyone holding a ticket that is no longer approved, unless they also
-  // hold an approved one.
+  // hold an approved one. Keyed by the Luma name, so a card name is looked
+  // up through NAME_ALIASES.
   const nameKeys = (g) => [g.name, g.user_name, g.user?.name].filter(Boolean).map(nameKey);
   const approved = new Set(attendees.flatMap(nameKeys));
   const cancelled = new Set(
@@ -251,7 +252,10 @@ try {
     }
     // A card outlives its ticket, so a person whose ticket was cancelled
     // ("not going" on Luma) is left off.
-    for (const ch of byCompany.get(c.key) ?? []) if (!cancelled.has(nameKey(ch.name))) add(ch);
+    for (const ch of byCompany.get(c.key) ?? []) {
+      const n = nameKey(ch.name);
+      if (!cancelled.has(NAME_ALIASES[n] ?? n)) add(ch);
+    }
     // The most common raw spelling. Among equals, the one that is already the
     // company's own key, so an alias does not put the division's name on the
     // island: "Tern" over "Tern Travel" when each was typed once.
