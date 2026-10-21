@@ -1,5 +1,168 @@
 [
   {
+    "id": "kaigi-on-rails-2026",
+    "date": "2026-10-16",
+    "headline": "Kaigi on Rails brings DHH and Matz to Tokyo for 34 talks",
+    "summary": "DHH opened with \"Where the tracks go next\" and Matz also gave a keynote. Rosa Gutiérrez spoke on \"Solid Queue: two years on Rails\", Cristian Planas on safety nets for AI-written code, and Akira Matsuda ran a web framework benchmark battle. Hayato Okumoto described moving a production Rails app from Puma to Falcon, the same move Samuel Williams presented in Pune a week earlier.",
+    "link": "https://rubyevents.org/events/kaigi-on-rails-2026/talks",
+    "category": "Community",
+    "source": "RubyEvents"
+  },
+  {
+    "id": "mcp-ruby-sdk-1-8-oauth",
+    "date": "2026-10-16",
+    "headline": "The official MCP Ruby SDK can now act as an OAuth 2.1 resource server",
+    "summary": "Version 1.8.0 verifies bearer tokens on the streamable HTTP transport, through JWT or token introspection, and ships Rack middleware for the protected-resource metadata. A Ruby MCP server can now require sign-in without custom code. It follows 1.7.0 on Oct 5 and the SDK reaching Tier 1 status with a full conformance pass on Sep 29.",
+    "link": "https://github.com/modelcontextprotocol/ruby-sdk/releases/tag/v1.8.0",
+    "category": "Product",
+    "source": "GitHub"
+  },
+  {
+    "id": "agents-on-rails-stage-3",
+    "date": "2026-10-13",
+    "headline": "Agents on Rails Stage 3 tests whether a model can build on its own work across sessions",
+    "summary": "The Rails Foundation benchmark adds large multi-step tasks where every ticket starts a fresh session, and merges all three stages into one leaderboard of nine models. Claude Opus 5.5 at xhigh is the most accurate at 65.3%. GPT-6 Luna is the cheapest at about $0.19 per run, and GPT-6.1 Sol at xhigh gives the best balance, 60.8% for about $0.80 per run.",
+    "link": "https://rubyonrails.org/2026/10/13/agents-on-rails-stage-3",
+    "category": "Product",
+    "startupName": "Ruby on Rails",
+    "source": "Ruby on Rails"
+  },
+  {
+    "id": "planetscale-on-azure",
+    "date": "2026-10-13",
+    "headline": "PlanetScale Postgres and Neki now run on Microsoft Azure",
+    "summary": "PlanetScale's Postgres and its sharded Postgres, Neki, are available in three Azure regions with the same high availability, Query Insights and backups as on AWS and Google Cloud. Vitess is not on Azure yet. A week earlier PlanetScale shipped dedicated Postgres read replicas.",
+    "link": "https://planetscale.com/blog/planetscale-is-now-on-azure",
+    "category": "Product",
+    "startupName": "PlanetScale",
+    "source": "PlanetScale"
+  },
+  {
+    "id": "ruby-4-1-0-preview1",
+    "date": "2026-10-12",
+    "headline": "Ruby 4.1 preview gives every Ractor its own garbage collector",
+    "summary": "The first preview of Ruby 4.1 brings Ractor-local GC: each Ractor collects its own heap on its own thread without stopping the others. The release notes say this brings Ractors much closer to leaving experimental status. YJIT now runs on Windows on x64, and autoload_relative is new.",
+    "link": "https://www.ruby-lang.org/en/news/2026/10/12/ruby-4-1-0-preview1-released/",
+    "category": "Product",
+    "source": "ruby-lang.org"
+  },
+  {
+    "id": "rubygems-new-gems-doubled",
+    "date": "2026-10-12",
+    "headline": "New gems published on RubyGems nearly doubled in a year",
+    "summary": "Julik Tarkhanov counted about 4,600 new gem names in the year to October 2025 and about 8,900 in the year since. Monthly registrations went from 400 to 500 to between 800 and 1,600 starting in March 2026. He credits AI tooling: problems once too big for a library, like PDF generation, native GUIs and Parquet files, now get packaged and published in Ruby.",
+    "link": "https://blog.julik.nl/2026/10/the-weimar-of-ruby",
+    "category": "Traction",
+    "source": "Julik Tarkhanov"
+  },
+  {
+    "id": "sam-ruby-roundhouse-compiled-rails",
+    "date": "2026-10-12",
+    "headline": "Sam Ruby's Roundhouse runs compiled Rails routes 2.3 to 4.7 times faster",
+    "summary": "In a series of posts tied to his Deccan Queen on Rails keynote, Sam Ruby showed Roundhouse compiling Rails actions ahead of time and running them inside a normal Rails process through Ruby::Box. On Shopify's Lobsters benchmark, 48 of 84 GET actions qualify and run 2.3 to 4.7 times faster than Rails with YJIT. The figures are from his own benchmarks.",
+    "link": "https://intertwingly.net/blog/2026/10/09/Many-Keepers.html",
+    "category": "Community",
+    "source": "Sam Ruby"
+  },
+  {
+    "id": "xo-ruby-toronto-nyc-montreal",
+    "date": "2026-10-10",
+    "headline": "Three XO Ruby days in three weeks, and agents were the theme of all three",
+    "summary": "Toronto (Oct 3) heard \"Agent Mission Control\" and \"The Chief Agent Officer\". New York (Oct 10) had Landon Gray on building a software factory with the human out of the loop, Noel Rappin's \"Rubyist in the Loop\" and Charles Nutter on JRuby. Montréal (Oct 17) had Kasper Timm Hansen on building gem.coop and Daniela Velasquez on AI pipelines in plain Ruby.",
+    "link": "https://rubyevents.org/events/xoruby-new-york-city-2026/talks",
+    "category": "Community",
+    "source": "RubyEvents"
+  },
+  {
+    "id": "rubyllm-2-1-mcp-evaluations",
+    "date": "2026-10-08",
+    "headline": "RubyLLM 2.1 adds a built-in MCP client and evaluations that run in CI",
+    "summary": "Three weeks after 2.0, Carmine Paolino shipped an MCP client with per-user OAuth and tool allowlists, typed judgments that return probabilities, and RubyLLM::Evaluation with a rake task that fails the build. It also adds OpenTelemetry tracing. He presented it the same week at Deccan Queen on Rails, and 2.1.1 followed on Oct 11.",
+    "link": "https://github.com/crmne/ruby_llm/releases/tag/v2.1.0",
+    "category": "Product",
+    "startupName": "RubyLLM",
+    "source": "GitHub"
+  },
+  {
+    "id": "deccan-queen-on-rails-2026",
+    "date": "2026-10-08",
+    "headline": "Deccan Queen on Rails gives its 16 talks in Pune to AI in production and the Rails toolchain",
+    "summary": "Samuel Williams, Katie Lawhorn and Tavian Barnes opened with migrating Sidekick from Puma to Falcon, and Sam Ruby opened day two with \"The Hidden 4GL\". Rohit Joshi covered scaling tool calling with RubyLLM and pgvector. Marco Roth closed with Herb, and Irina Nazarova with what benchmarking AI models for the Rails Foundation taught.",
+    "link": "https://rubyevents.org/events/deccan-queen-on-rails-2026/talks",
+    "category": "Community",
+    "source": "RubyEvents"
+  },
+  {
+    "id": "fin-4-apex-2",
+    "date": "2026-10-07",
+    "headline": "Fin 4 and Apex 2.0 are Fin's first release under Salesforce",
+    "summary": "Fin shipped six launches: a proactive customer agent, Skills, Operator Routines and Memory, Human in the Loop, a second-generation Copilot, and the Apex 2.0 model family. Apex 2.0 resolves 8.6% more hard conversations than Apex 1.0 with 16.5% fewer hallucinations. More than 1,600 customers use Operator.",
+    "link": "https://fin.ai/blog/introducing-fin-4",
+    "category": "Product",
+    "startupName": "Fin (Intercom)",
+    "source": "Fin"
+  },
+  {
+    "id": "gusto-pro-multi-client-mcp",
+    "date": "2026-10-07",
+    "headline": "Gusto gives accountants one MCP connection for all their clients",
+    "summary": "Accountants connect Gusto once and work across every client from their own AI tools. The multi-client MCP is available to all firms now. Gusto Pro gets its biggest redesign since 2021, with AI payroll workflows and a Pro Gus assistant in early access. More than 23,000 firms and 500,000 small businesses use Gusto.",
+    "link": "https://www.prnewswire.com/news-releases/gusto-unveils-redesigned-gusto-pro-new-multi-client-model-context-protocol-and-expanded-partner-program-for-accountants-302901507.html",
+    "category": "Product",
+    "startupName": "Gusto",
+    "source": "PR Newswire"
+  },
+  {
+    "id": "factorial-one-agent",
+    "date": "2026-10-07",
+    "headline": "Factorial launches One, its own AI agent for companies",
+    "summary": "The agent connects company information and automates work across HR, finance and operations. Factorial built it in-house and designed it for GDPR and the EU AI Act. The Barcelona company, whose backend is Rails, counts 17,000 business clients and more than 1.3 million users.",
+    "link": "https://en.ara.cat/economy/factorial-completes-the-jump-to-ai-for-companies-with-new-personal-agent_1_5872571.html",
+    "category": "Product",
+    "startupName": "Factorial",
+    "source": "Ara"
+  },
+  {
+    "id": "uber-acquires-ezcater",
+    "date": "2026-10-06",
+    "headline": "Uber buys ezCater for $2.3 billion in cash",
+    "summary": "Uber is buying the workplace catering marketplace, which runs on Rails, to bring catering to Uber Eats and Uber for Business. ezCater has more than $2.5 billion in gross bookings over the last twelve months, grows in the high teens year over year, and works with more than 140,000 restaurants. The deal is expected to close within months, pending regulatory approval.",
+    "link": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-to-Acquire-ezCater-as-it-Brings-Catering-to-Uber-Eats/default.aspx",
+    "category": "Acquisition",
+    "startupName": "ezCater",
+    "source": "Uber"
+  },
+  {
+    "id": "gitlab-governed-software-factory",
+    "date": "2026-10-06",
+    "headline": "GitLab turns its platform into a governed software factory for agents",
+    "summary": "GitLab added /goal to its Duo Agent Platform and to Slack, Artifact Central in beta, a Dependency Firewall in early access, and Secrets Manager in general availability in 19.5. Together they take work from an idea to production under each organization's own policies.",
+    "link": "https://www.nasdaq.com/press-release/gitlab-announces-foundation-governed-software-factory-2026-10-06",
+    "category": "Product",
+    "startupName": "GitLab",
+    "source": "Nasdaq"
+  },
+  {
+    "id": "checkr-mortgage-expansion",
+    "date": "2026-10-06",
+    "headline": "Checkr moves into mortgage verification after buying Truv",
+    "summary": "Checkr now verifies income, employment and assets for mortgage lenders, including self-employed and rental income. It follows the Truv acquisition in August and a Workday partnership in September. Checkr verifies more than 97% of US workers for over 140,000 customers.",
+    "link": "https://www.prnewswire.com/news-releases/checkr-unveils-expanded-mortgage-offering-following-year-of-investment-and-growth-302899432.html",
+    "category": "Traction",
+    "startupName": "Checkr",
+    "source": "PR Newswire"
+  },
+  {
+    "id": "37signals-hot-cell-1-0",
+    "date": "2026-10-05",
+    "headline": "37signals moves Active Storage processing into a locked-down sidecar",
+    "summary": "Hot Cell 1.0 is a set of gems that runs image, video and PDF processing in an unprivileged container with no network and no credentials, written after an AI-chained Active Storage vulnerability. It already runs in production at Basecamp, HEY and Fizzy and adds about 3.4 ms per call. The Active Storage gems need Rails 8.2.",
+    "link": "https://dev.37signals.com/hot-cell-1-0/",
+    "category": "Product",
+    "startupName": "37signals",
+    "source": "37signals"
+  },
+  {
     "id": "rails-world-2026-recap",
     "date": "2026-10-01",
     "headline": "Rails World 2026 draws 1,000+ developers from 58 countries, and every talk is already online",

@@ -128,7 +128,7 @@ export const COMPANY_META = {
   instrumentl: { industry: "Enterprise SaaS", stage: "Growth" },
   versemedical: { industry: "Healthtech", stage: "Early-stage" },
   github: { industry: "AI / Dev Tools", stage: "Public / Large" },
-  generalmedicine: { industry: "Healthtech", stage: "Seed" },
+  generalmedicine: { industry: "Healthtech", stage: "Growth" },
   ascend: { industry: "Fintech", stage: "Growth" },
   piesystems: { industry: "Fintech", stage: "Early-stage" },
   upmetrics: { industry: "Enterprise SaaS", stage: "Early-stage" },
