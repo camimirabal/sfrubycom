@@ -47,7 +47,9 @@ const cameos = [
 );
 
 // Flat sponsor list for the hero ticker, tier order preserved.
-const tickerSponsors = conference2026SponsorTiers.flatMap((t) => t.sponsors);
+const tickerSponsors = conference2026SponsorTiers
+    .flatMap((t) => t.sponsors)
+    .filter((s) => s.ticker !== false);
 
 // One description for the meta tag, Open Graph and Twitter, from the same
 // data the page renders, so a price change never leaves a stale preview. The

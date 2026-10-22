@@ -14,13 +14,15 @@
 // The hero ticker draws logos as white silhouettes. A logo with art cut out of
 // a filled shape (CodeRabbit's rabbit in its circle) turns into a solid blob
 // that way, so it sets tickerLogo to the brand's own dark-background file,
-// which the ticker shows as it is, without the filter.
+// which the ticker shows as it is, without the filter. ticker: false keeps a
+// sponsor out of the ticker altogether (Evil Martians, already "Organized by").
 // ============================================================
 export const conference2026SponsorTiers = [
   {
     tier: "Pickaxe Sponsor",
     size: "xl",
     headingClass: "text-ruby-600",
+    shareRow: true,
     sponsors: [
       {
         name: "Buildkite",
@@ -28,6 +30,23 @@ export const conference2026SponsorTiers = [
         logoWidth: 962,
         logoHeight: 160,
         url: "https://buildkite.com/",
+      },
+    ],
+  },
+  {
+    tier: "Event Organizer Sponsor",
+    size: "xl",
+    headingClass: "text-ruby-600",
+    shareRow: true,
+    sponsors: [
+      {
+        name: "Evil Martians",
+        logo: "/sponsor_evilmartians.png",
+        logoWidth: 1275,
+        logoHeight: 320,
+        url: "https://evilmartians.com/",
+        // The hero ticker already leads with Evil Martians under "Organized by".
+        ticker: false,
       },
     ],
   },
