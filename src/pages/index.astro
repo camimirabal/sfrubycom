@@ -17,6 +17,7 @@ import { conference2026SponsorTiers } from "../data/sponsors.js";
 import SponsorTiers from "../components/SponsorTiers.astro";
 import { markdownTwinFor } from "../lib/markdown-twins.js";
 import { palette } from "../design/tokens.mjs";
+import MetaPixel from "../components/MetaPixel.astro";
 import "../styles/global.css";
 
 // Fighter-select roster: confirmed speakers with sprites, minus a few kept off
@@ -131,6 +132,7 @@ const headlineCloses = headline?.closesOn
             data-domain="sfruby.com"
             src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js"
         ></script>
+        <MetaPixel />
     </head>
     <body
         class="bg-white text-gray-900 font-sans font-light min-h-screen flex flex-col pb-tabbar"
